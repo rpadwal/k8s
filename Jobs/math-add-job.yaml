@@ -4,9 +4,10 @@ metadata:
   name: math-add-job
 spec:
   template:
+    completions: 3
     spec:
       containers:
         - name: match-add
-          image: ubuntu
+          image: kodekloud/random-error
           command: ['expr', '3', '+', '2']
       restartPolicy: Never
