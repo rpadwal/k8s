@@ -7,7 +7,7 @@ spec:
     - name: random-alpine
       image: alpine
       command: ["/bin/sh", "-c"]
-      args: ["shuf -i 0-100 -n 1 >> /opt/number.out;"]
+      args: ["echo 123 >> /opt/number.out;"]
       volumeMounts:
         - mountPath: /opt
           name: data-volume
