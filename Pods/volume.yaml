@@ -14,6 +14,5 @@ spec:
 
   volumes:
     - name: data-volume
-      hostPath:
-        path: /data
-        type: Directory
+      PersistentVolumeClaim:
+        claimName: myclaim
