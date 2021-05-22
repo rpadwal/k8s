@@ -24,6 +24,16 @@ spec:
   selector:
     matchLabels:
       app: database-pod
+  volumeClaimTemplates:
+  - metadata:
+      name: data-volume
+    spec:
+      accessModes:
+        -ReadWriteMany
+      storageClassName: managed-nfs-storage
+      resources:
+        requests:
+          storage: 500Mi
 ---
 
 apiVersion: v1
