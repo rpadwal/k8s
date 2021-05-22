@@ -6,7 +6,7 @@ metadata:
     app: database
     tier: backend
 spec:
-  tempalate:
+  template:
     metadata:
       labels:
         app: database-pod
