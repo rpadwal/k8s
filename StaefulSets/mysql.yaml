@@ -24,3 +24,16 @@ spec:
   selector:
     matchLabels:
       app: database-pod
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: mysql-cluster
+spec:
+  ports:
+    - port: 3306
+  selector:
+    app: database-pod
+    tier: backend-pod
+  clusterIp: None
