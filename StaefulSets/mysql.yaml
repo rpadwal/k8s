@@ -16,8 +16,8 @@ spec:
         - name: myslq-container
           image: mysql
 
+  serviceName: mysql-cluster
   replicas: 3
   selector:
     matchLabels:
       app: database-pod
- serviceName: mysql-cluster
