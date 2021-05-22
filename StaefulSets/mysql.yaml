@@ -1,0 +1,22 @@
+apiVersion: app/v1
+kind: StatefulSet
+metadata:
+  name: mysql
+  labels:
+    app: database
+    tier: backend
+spec:
+  tempalate:
+    metadata:
+      labels:
+        app: database-pod
+        tier: backend-pod
+    spec:
+      containers:
+        - name: myslq-container
+          image: mysql
+
+  replicas: 3
+  selector:
+    matchLabels:
+      app: database-pod
