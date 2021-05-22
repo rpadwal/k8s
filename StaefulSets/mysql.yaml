@@ -36,4 +36,4 @@ spec:
   selector:
     app: database-pod
     tier: backend-pod
-  clusterIp: None
+  clusterIP: None
